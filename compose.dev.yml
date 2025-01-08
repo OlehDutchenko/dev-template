@@ -1,0 +1,13 @@
+name: change_my_name
+
+services:
+    dev:
+        build:
+            dockerfile: docker/dev.dockerfile
+        container_name: ${COMPOSE_PROJECT_NAME}-dev
+        hostname: ${COMPOSE_PROJECT_NAME}-dev
+        tty: true
+        volumes:
+            - ./:/app
+        ports:
+            - '3000:3000'

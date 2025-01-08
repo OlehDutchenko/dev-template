@@ -1,0 +1,12 @@
+{
+  "packageManager": "pnpm@9.15.3",
+  "scripts": {
+    "--- DEV-DOCKER ---": "SECTION",
+    "dev-up": "docker compose -f compose.dev.yml up -d && npm run dev-exec",
+    "dev-exec": "docker exec -it change_my_name-dev sh",
+    "dev-down": "docker compose -f compose.dev.yml down --remove-orphans"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

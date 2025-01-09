@@ -1,13 +1,14 @@
-name: change_my_name
-
 services:
     dev:
+        env_file: ./.env
         build:
             dockerfile: docker/dev.dockerfile
-        container_name: ${COMPOSE_PROJECT_NAME}-dev
-        hostname: ${COMPOSE_PROJECT_NAME}-dev
+            args:
+                - WORKDIR=${DEV_DOCKER_WORKDIR}
+        container_name: ${DEV_DOCKER_CONTAINER}
+        hostname: ${DEV_DOCKER_HOSTNAME}
         tty: true
         volumes:
-            - ./:/app
+            - ./:${DEV_DOCKER_WORKDIR}
         ports:
             - '3000:3000'

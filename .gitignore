@@ -17,7 +17,8 @@ coverage
 
 # Next.js
 next-env.d.ts
-.env*local
+.env*
+!.env.example
 
 # Build Outputs
 .next/

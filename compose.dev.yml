@@ -1,6 +1,5 @@
 services:
     dev:
-        env_file: ./.env
         build:
             dockerfile: docker/dev.dockerfile
             args:
@@ -12,3 +11,4 @@ services:
             - ./:${DEV_DOCKER_WORKDIR}
         ports:
             - '3000:3000'
+            - '6006:6006'

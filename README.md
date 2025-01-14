@@ -1,8 +1,15 @@
-# pnpm-dev-docker-template
+# dev-template
 
-1. Clone `.env.example` to `.env` and set the values.
-2. Run `make dev-up` to start the development environment.
-   - If dev is already running, run `make dev-exec` to enter the container.
-3. Run `make dev-down` to stop the development environment.
+## Dev Docker
 
----
+This sections describes how to run the local development environment using Docker.
+
+> _**Note:**_
+> 1. _This is not required option, you can run the project locally without Docker_
+> 2. _For this option you need to have `make` and `docker`_
+
+### Commands
+
+- `make dev-up` will build the Docker image, run dev container and enter to the container.
+- `make dev-exec` enters to running container.
+- `make dev-down` stops and removes the running container.
